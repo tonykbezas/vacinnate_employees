@@ -104,6 +104,7 @@ export const ListEmploye = () => {
                                             <th>Apellidos</th>
                                             <th>Vacunado</th>
                                             <th>Vacuna</th>
+                                            <th>Usuario</th>
                                             <th>Acciones</th>
                                         </tr>
                                     </thead>

@@ -13,3 +13,5 @@ Para correr el json-server
 ### `npm run fake-api` 
 
 Para utilizar la aplicación por favor da click en Login sin ningun usuario ni conrtraseña
+
+las contraseñas de los usuarios son sus cedulas
