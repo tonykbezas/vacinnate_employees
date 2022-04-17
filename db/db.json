@@ -1,0 +1,43 @@
+{
+  "usuario": [
+    {
+      "id": 1,
+      "cedula": 1753788890,
+      "nombres": "Erick Anthony",
+      "apellidos": "Cabezas Miranda",
+      "correo": "tonykbezas@gmail.com",
+      "usuario": "tonykbezas",
+      "contrasenia": "lel123",
+      "tipo": "admin",
+      "vacuna": "si",
+      "tipo_vacuna": "Pfizer",
+      "fecha_vacuna": ""
+    },
+    {
+      "cedula": "1400878537",
+      "nombres": "Keyla",
+      "apellidos": "Mora Flores",
+      "correo": "keyla@gmail.com",
+      "tipo": "",
+      "usuario": "keyla_140",
+      "contrasenia": "1400878537",
+      "vacuna": "no",
+      "tipo_vacuna": "",
+      "fecha_vacuna": "",
+      "id": 1650171828855
+    },
+    {
+      "cedula": "1400878537",
+      "nombres": "Pamela",
+      "apellidos": "Cabezas",
+      "correo": "tonykbezas@gmail.com",
+      "tipo": "user",
+      "usuario": "tonykbezas_140",
+      "contrasenia": "1400878537",
+      "vacuna": "si",
+      "tipo_vacuna": "Sputnik",
+      "fecha_vacuna": "",
+      "id": 1650224776110
+    }
+  ]
+}
