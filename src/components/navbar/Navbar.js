@@ -1,6 +1,16 @@
-import { Link, NavLink } from 'react-router-dom';
+import { useContext } from 'react';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
+import { UserContext } from '../admin/UserContext';
 
 export const Navbar = () => {
+    const {user, setUser} = useContext(UserContext)
+    const navigate = useNavigate();
+    const logOut = () => {
+        setUser({});
+        navigate('/',{
+            replace:true
+        })
+    }
     return (
         <>
         <div id="sidebar" className="active">
@@ -16,7 +26,7 @@ export const Navbar = () => {
                             </a>
                         </li>
                         <li className="sidebar-item  ">
-                            <a href="index.html" className='sidebar-link'>
+                            <a onClick={logOut} className='sidebar-link'>
                                 <i className="bi bi-grid-fill"></i>
                                 <span>Salir</span>
                             </a>

@@ -5,6 +5,7 @@ import { UserContext } from './UserContext';
 
 import Swal from 'sweetalert2';
 import validator from 'validator';
+import { Navbar } from '../navbar/Navbar';
 
 export const RegisterForm = () => {
     const {editData,setEditData} = useContext( UserContext );
@@ -120,6 +121,7 @@ export const RegisterForm = () => {
     
   return (
     <>
+    <Navbar />
     <section id="multiple-column-form">
         <div className="row match-height">
             <div className="col-12">

@@ -6,12 +6,16 @@
       "nombres": "Erick Anthony",
       "apellidos": "Cabezas Miranda",
       "correo": "tonykbezas@gmail.com",
-      "usuario": "tonykbezas",
-      "contrasenia": "lel123",
+      "usuario": "kruger",
+      "contrasenia": "admin",
       "tipo": "admin",
       "vacuna": "si",
       "tipo_vacuna": "Pfizer",
-      "fecha_vacuna": ""
+      "fecha_vacuna": "",
+      "dosis": 0,
+      "fecha_nacimiento": "",
+      "movil": "",
+      "direccion": ""
     },
     {
       "cedula": "1400878537",
@@ -24,20 +28,45 @@
       "vacuna": "no",
       "tipo_vacuna": "",
       "fecha_vacuna": "",
+      "dosis": 0,
+      "fecha_nacimiento": "",
+      "movil": "",
+      "direccion": "",
       "id": 1650171828855
     },
     {
       "cedula": "1400878537",
       "nombres": "Pamela",
-      "apellidos": "Cabezas",
+      "apellidos": "Jaramillo",
       "correo": "tonykbezas@gmail.com",
       "tipo": "user",
       "usuario": "tonykbezas_140",
       "contrasenia": "1400878537",
       "vacuna": "si",
       "tipo_vacuna": "Sputnik",
-      "fecha_vacuna": "",
+      "fecha_vacuna": "2018-07-22",
+      "dosis": "1",
+      "fecha_nacimiento": "2022-04-19",
+      "movil": "0987371697",
+      "direccion": "S34U y Oe12",
       "id": 1650224776110
+    },
+    {
+      "cedula": "1801935683",
+      "nombres": "Narciza",
+      "apellidos": "Miranda",
+      "correo": "narmir@gmail.com",
+      "tipo": "user",
+      "usuario": "narmir_180",
+      "contrasenia": "1801935683",
+      "id": 1650346466520,
+      "fecha_nacimiento": "1993-06-01",
+      "direccion": "Chillogallo, El porvenir",
+      "movil": "0987371697",
+      "fecha_vacuna": "2021-08-19",
+      "dosis": "1",
+      "vacuna": "si",
+      "tipo_vacuna": "Sputnik"
     }
   ]
 }

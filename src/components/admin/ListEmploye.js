@@ -2,13 +2,20 @@ import React, { useEffect, useState } from 'react'
 import { helpHttp } from '../../helpers/helpHttp'
 import { RowEmploye } from './RowEmploye';
 import Swal from 'sweetalert2';
+import { useForm } from '../../hooks/useForm';
 
 export const ListEmploye = () => {
     let api = helpHttp();
     let url = "http://localhost:5000/usuario";
     const [db,setDb] = useState([]);
     const [filter, setFilter] = useState('');
-    const [filterDb, setFilterDb] = useState([])
+    const [filterDb, setFilterDb] = useState([]);
+    let initialState = {
+        "fecha_vacuna1": '',
+        "fecha_vacuna2": '',
+    }
+    const [ formValues, handleInputChange, 
+        setValues, handleInputBlur, error, setError ] = useForm(initialState,()=>{});
     useEffect(() => {
       api.get(url).then(res => {
           if(!res.err){
@@ -62,6 +69,31 @@ export const ListEmploye = () => {
             setFilterDb(newData);
         }
     }
+
+    const filtroFecha = (e) =>{
+        console.log(formValues)
+        setFilter(formValues.fecha_vacuna1);
+        if (formValues.fecha_vacuna1 === "" && formValues.fecha_vacuna2 === ""){
+            setFilter('');
+            setFilterDb([])
+        }else{
+            let newData = db.filter(el => {
+                const original_date = new Date(el.fecha_vacuna);
+                const from_date = new Date(formValues.fecha_vacuna1);
+                const to_date = new Date(formValues.fecha_vacuna2);
+                if (original_date >= from_date && original_date <= to_date){
+                    return el
+                }
+            })
+            setFilterDb(newData);
+        }
+    }
+
+    const filtroLimpiar = () => {
+        setFilter('');
+        setFilterDb([])
+        setValues(initialState)
+    }
     
 
   return (
@@ -86,6 +118,16 @@ export const ListEmploye = () => {
             <option value="Jhonson&Jhonson">Jhonson&Jhonson</option>
         </select>
     </div>
+    <div className="input-group mb-3">
+        <label >Desde</label>
+        <input type="date" id="fecha_vacuna1" className="form-control"
+            name="fecha_vacuna1" value={formValues.fecha_vacuna1} onChange={handleInputChange}/>
+        <label >Hasta</label>
+        <input type="date" id="fecha_vacuna2" className="form-control"
+            name="fecha_vacuna2"  value={formValues.fecha_vacuna2} onChange={handleInputChange} />
+        <button className='btn btn-primary' onClick={filtroFecha} > Filtrar </button>
+        <button className='btn btn-secondary' onClick={filtroLimpiar} > Limpiar </button>
+    </div>
     <section className="section">
         <div className="row" id="basic-table">
             <div className="col-12 col-md-12">
@@ -105,6 +147,7 @@ export const ListEmploye = () => {
                                             <th>Vacunado</th>
                                             <th>Vacuna</th>
                                             <th>Usuario</th>
+                                            <th>Fecha Vacunación</th>
                                             <th>Acciones</th>
                                         </tr>
                                     </thead>

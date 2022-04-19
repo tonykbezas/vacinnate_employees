@@ -7,7 +7,7 @@ import { RegisterForm } from "../components/admin/RegisterForm";
 export const DashboardRoutes = () => {
   return (
     <>
-        <Navbar/>
+        {/* <Navbar/> */}
         <div id="main">
           <Routes>
               <Route path="admin" element={<AdminScreen />} />

@@ -24,6 +24,7 @@ export const RowEmploye = ({el, deleteData}) => {
             <td className="text-bold-500">{el.vacuna}</td>
             <td className="text-bold-500">{el.tipo_vacuna}</td>
             <td className="text-bold-500">{el.usuario}</td>
+            <td className="text-bold-500">{el.fecha_vacuna}</td>
             <td className="text-bold-500">
                 <button className='btn btn-warning' name="edit_tony" onClick={updateData1}>
                     Editar
